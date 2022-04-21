@@ -1,0 +1,32 @@
+<form class="mt-5">
+  <div class="form-row">
+    <div class="form-group col-md-10">
+      <h2 id="head" class="mb-4  text-light">Modifica un Comune</h2>
+    </div>
+    <div class="form-group col-md-2">
+      <h2 class=" btnBack float-right" (click)="back()"><i class="bi bi-arrow-left-square-fill"></i></h2>
+    </div>
+  </div>    
+  <div class="form-row">
+      <div class="form-group col-md-4">
+        <label>Nome</label>
+        <input type="text" [(ngModel)]="editComuni.nome" name="comune" class="form-control">
+      </div>
+      <div class="form-group col-md-4">
+        <label>Provincia</label>
+        <select class="form-select" [(ngModel)]="editComuni.provincia" name="nome"  class="form-control"  >
+          <option selected  >Seleziona Provincia</option>
+          <option  *ngFor="let item of province" [ngValue]="item">{{item.nome}}</option>
+        </select>
+        </div>
+      <div class="form-group col-md-4">
+        <label id="btnEditLabel">Button</label>
+         <button type="submit" class="btn btnEdit col-sm btn-success" (click)="saveComune(editComuni)">Aggiungi</button>
+      </div>
+    </div>
+  </form>
+
+
+
+ 
+

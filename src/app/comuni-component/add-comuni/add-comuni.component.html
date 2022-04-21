@@ -1,0 +1,32 @@
+<form class="mt-5">
+  <div class="form-row">
+    <div class="form-group col-md-10">
+      <h2 id="head" class="mb-4  text-light">Aggiungi un Comune</h2>
+    </div>
+    <div class="form-group col-md-2">
+      <h2 class=" btnBack float-right" [routerLink]="['/comuni/page/:page']" routerLinkActive="router-link-active" ><i class="bi bi-arrow-left-square-fill"></i></h2>
+    </div>
+  </div>    
+      <div class="form-row">
+      <div class="form-group col-md-4">
+        <label>Nome</label>
+        <input type="text" [(ngModel)]="newComune.nome"  name="nome" class="form-control">
+      </div>
+      <div class="form-group col-md-4">
+        <label>Provincia</label>
+        <select class="form-select" [(ngModel)]="newComune.provincia" name="provincia"  class="form-control"  >
+          <option selected  >Seleziona Provincia</option>
+          <option  *ngFor="let item of province" [ngValue]="item">{{item.nome}}</option>
+        </select>
+      </div>
+      <div class="form-group col-md-4">
+        <label>Sigla</label>
+        <input class="form-select" disabled [(ngModel)]="newComune.provincia.sigla" name="sigla"  class="form-control">
+        
+        </div>
+    </div>
+  </form>
+  <div>
+    <button type="submit" class="btn btnAddUser btnEdit col-sm btn-success" (click)="addComune(newComune)">Aggiungi</button>
+ </div>
+

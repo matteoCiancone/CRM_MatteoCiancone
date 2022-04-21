@@ -1,0 +1,93 @@
+<div class="container mt-5">
+    <div class="card text-center">
+      <div class="card-header row">
+        <div class="col-6">
+          <ul class="nav nav-pills card-header-pills">
+            <li class="nav-item">
+              <a class="btn m-2 btn-card" (click)="displayCliente()">Cliente</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn m-2 btn-card" (click)="displayLg()">Sede Operativa</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn m-2 btn-card" (click)="displayOp()">Sede Legale</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-6">
+          <button type="button" (click)="selectToEdit()"   class="btn btn-edit m-2 float-right btn-outline-dark" >Modifica Cliente <i class="bi bi-pencil-fill"></i></button>
+          <button type="button" (click)="addFattura()"   class="btn btn-edit m-2 float-right btn-outline-dark" >Aggiungi Fattura <i class="bi bi-pencil-fill"></i></button>
+        </div>
+      </div>
+
+      <div class="card-body" *ngIf="showCliente">
+        <h5 class="card-title">Cliente</h5>
+        <hr>
+        <h6 class="card-title">Nome e Cognome</h6>
+          <p class="card-text">{{clienteDetail.nomeContatto}} {{clienteDetail.cognomeContatto}}</p>
+          <hr>
+          <h6 class="card-title">Ragione Sociale</h6>
+          <p class="card-text">{{clienteDetail.ragioneSociale}}</p>
+          <hr>
+          <h6 class="card-title">Partita IVA</h6>
+          <p class="card-text">N. {{clienteDetail.partitaIva}}</p>
+          <hr>
+          <h6 class="card-title">Email e PEC</h6>
+          <p class="card-text">{{clienteDetail.email}} - {{clienteDetail.pec}}</p>
+          <hr>
+          <h6 class="card-title">Telefono</h6>
+          <p class="card-text">{{clienteDetail.telefono}}</p>
+          <hr>
+          <h6 class="card-title">Tipo Cliente</h6>
+          <p class="card-text">{{clienteDetail.tipoCliente}}</p>
+      </div>
+
+
+      <div class="card-body" *ngIf="showOp">
+        <h5 class="card-title">Sede Operativa</h5>
+        <hr>
+        <h6 class="card-title">Comune</h6>
+        <p class="card-text">{{clienteDetail.indirizzoSedeOperativa.comune.nome}},
+                              CAP {{clienteDetail.indirizzoSedeOperativa.cap}}
+        </p>
+        <hr>
+        <h6 class="card-title">Provincia</h6>
+        <p class="card-text">{{clienteDetail.indirizzoSedeOperativa.comune.provincia.nome}}
+                              ({{clienteDetail.indirizzoSedeOperativa.comune.provincia.sigla}})
+        </p>
+        <hr>
+        <h6 class="card-title">Indirizzo</h6>
+        <p class="card-text">{{clienteDetail.indirizzoSedeOperativa.via}}, 
+                              n. {{clienteDetail.indirizzoSedeOperativa.civico}}, 
+                              </p>
+        <hr>
+        <h6 class="card-title">Località</h6>
+        <p class="card-text">{{clienteDetail.indirizzoSedeOperativa.localita}}</p>
+  
+      </div>
+
+
+
+      <div class="card-body" *ngIf="showLg">
+        <h5 class="card-title">Sede Legale</h5>
+        <hr>
+        <h6 class="card-title">Comune</h6>
+        <p class="card-text">{{clienteDetail.indirizzoSedeLegale.comune.nome}},
+                              CAP {{clienteDetail.indirizzoSedeLegale.cap}}
+        </p>
+        <hr>
+        <h6 class="card-title">Provincia</h6>
+        <p class="card-text">{{clienteDetail.indirizzoSedeLegale.comune.provincia.nome}}
+                              ({{clienteDetail.indirizzoSedeLegale.comune.provincia.sigla}})
+        </p>
+        <hr>
+        <h6 class="card-title">Indirizzo</h6>
+        <p class="card-text">{{clienteDetail.indirizzoSedeLegale.via}}, 
+                              n. {{clienteDetail.indirizzoSedeLegale.civico}}, 
+                              </p>
+        <hr>
+        <h6 class="card-title">Località</h6>
+        <p class="card-text">{{clienteDetail.indirizzoSedeLegale.localita}}</p>
+        
+      </div>
+    </div>

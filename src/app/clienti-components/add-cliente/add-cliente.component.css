@@ -1,0 +1,51 @@
+.btn-sedi{
+    background-color: #0D7377;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.4);
+    margin: 20px 0px 0px 20px;
+    border: none;
+    
+}
+.btnBack{
+    color:#0D7377 ;
+    cursor: pointer;
+}
+.btnBack:hover{
+    color:#14FFEC ;
+    cursor: pointer;
+}
+
+.btn-sedi:hover{
+    background-color:#14FFEC ;
+    color: black;
+}
+p{
+    color: red;
+}
+.btnAddUser{
+    background-color:rgb(34, 178, 142) ;
+}
+.btnAddUser:hover{
+    background-color:rgb(41, 206, 165) ;
+}
+
+label{
+    color: white;
+}
+
+input{
+    background-color: #EEEEEE;
+}
+
+@media screen and (max-width: 768px){
+  #head{
+      font-size: 1.5em;
+  }
+  
+    }
+
+ @media screen and (max-width: 425px){
+     #head{
+        font-size: 1.2em;
+          }
+        
+          }

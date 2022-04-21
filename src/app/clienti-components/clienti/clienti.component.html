@@ -1,0 +1,62 @@
+<div class="mt-5">
+  
+  <div class="row ">
+    <div class="col-8">
+    <button id="addC" class="btn mb-3 btn-add" [routerLink]="['/addCliente']" routerLinkActive="router-link-active" >Aggiungi Cliente <i class="bi bi-person-plus-fill"></i> </button>
+  </div>
+    <div class="  col-4">
+        <input [(ngModel)]="listFilter" type="text" class="form-control" placeholder="Cerca per nome">
+    </div>
+    </div>
+
+  <div class="table-responsive" >
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Cognome</th>
+            <th scope="col">Email</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of filteredClienti ">
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.nomeContatto}}</td>
+            <td>{{item.cognomeContatto}}</td>
+            <td>{{item.email}}</td>
+            <td><button type="button" class="btn btn-sm btn-trash btn-outline-light" (click)="removeCliente(item)"><i class="bi bi-trash"></i></button></td>
+            <td><button type="button" class="btn btn-sm btn-inf btn-outline-light" (click)="clienteDetail(item)"><i class="bi bi-info-circle"></i></button>
+          </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <!--PAGINATION-->
+
+  <div>
+    <ul class="pagination">
+      <li class="page-item">
+        <a class="page-link" href="#">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="" *ngFor="let num of pageNumbers">
+        <a class="page-link" href="clienti/page/{{num}}">{{num +1}}</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+ </div>
+
+
+
+

@@ -1,0 +1,27 @@
+<form class="mt-5">
+  <div class="form-row">
+    <div class="form-group col-md-10">
+      <h2 id="head" class="mb-4  text-light">Modifica una Provincia</h2>
+    </div>
+    <div class="form-group col-md-2">
+      <h2 class=" btnBack float-right" (click)="back()"><i class="bi bi-arrow-left-square-fill"></i></h2>
+    </div>
+  </div>    
+      <div class="form-row">
+      <div class="form-group col-md-4">
+        <label>Provincia</label>
+        <input class="form-select" [(ngModel)]="editProvince.nome" name="provincia"  class="form-control"  >
+         
+      </div>
+      <div class="form-group col-md-4">
+        <label>Sigla</label>
+        <input class="form-select" [(ngModel)]="editProvince.sigla" name="sigla"  class="form-control">
+         
+        </div>
+        <div class="form-group col-md-4">
+            <label id="sigla">Sigla</label>
+            <button type="submit" class="btn btnAddUser btnEdit col-sm btn-success" (click)="saveProvincia(editProvince)">Salva</button>
+         </div>
+    </div>
+  </form>
+

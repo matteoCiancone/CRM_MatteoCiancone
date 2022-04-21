@@ -1,0 +1,43 @@
+.btn-card:hover{
+    background-color:#14FFEC ;
+    color: black;
+}
+.btn-card{
+    color: white;
+}
+
+.btn-edit{
+    border-color: white;
+    color: white;
+   
+}
+
+.btn-edit:hover{
+   background-color:#14FFEC;
+   color: black;
+}
+
+.card{
+background-color: #0D7377;
+}
+
+
+
+.card-body{
+    background-color:#323232;
+    color: white;
+}
+hr{
+    border-color: #77777a;
+}
+
+
+.card{  
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;   
+    }
+    
+    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+    
+

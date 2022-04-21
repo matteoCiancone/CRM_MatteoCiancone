@@ -1,0 +1,86 @@
+
+.table{
+    background-color: #323232;
+    color: white;
+    border: 1px solid #0D7377;
+    
+}
+
+thead{
+    background-color: #0D7377;
+
+}
+
+th ,td{
+    padding: 5px;
+    border-bottom:1px solid #0D7377 ;
+    
+}
+
+tbody tr:hover{
+    background-color: rgba(255, 255, 255, 0.192);
+}
+
+
+.page-link{
+    background-color:rgb(35, 35, 37);
+    color: #77777a;
+}
+
+.page-link:hover{
+    background-color:rgba(255, 255, 255, 0.192); 
+}
+
+hr{
+    border-color: #77777a;
+}
+
+
+.table{  
+animation-name: fadeIn;
+animation-duration: 1s;
+animation-fill-mode: both;   
+}
+
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.btn-trash{
+   color: #14FFEC;
+   border-color: #14FFEC ;
+}
+
+.btn-inf{
+    color: #14FFEC;
+    border-color: #14FFEC ;
+ }
+ 
+
+.btn-add{
+background-color: #0D7377;
+color: white;
+ }
+
+.btn-add:hover{
+background-color: #14FFEC;
+color: black;
+}
+
+
+
+.btn-trash:hover{
+background-color: #FF004D;
+color: white;
+}
+
+
+.btn-inf:hover{
+    background-color: #5F85DB;
+    color: white;
+    }
+
+    @media screen and (max-width: 500px){
+     .dispFilt{
+         display: none;
+     }   
+           
+ }
